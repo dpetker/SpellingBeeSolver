@@ -7,7 +7,7 @@ import java.lang.IllegalArgumentException
 fun updateInput() {
   println("Updating words list...")
 
-  val input = File("src/words.txt").readLines()
+  val input = File("../test_data/words.txt").readLines()
   File("src/words.txt").printWriter().use { out ->
     input.forEach { line ->
       if (line.length > 3) {
