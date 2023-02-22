@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.send('Hello, Solver!');
 });
 
+app.get('/solve', (req, res) => {
+  res.send(`Required: ${req.query.req} | Optional: ${req.query.opt}`);
+});
+
 app.listen(port, () => {
   console.log(`API running on port ${port}`);
 });
